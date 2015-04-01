@@ -5,6 +5,7 @@ need install vundle first!
 
 homepage : https://github.com/gmarik/Vundle.vim
 
+
 Set up Vundle:
 
 Linux/Unix:
@@ -15,5 +16,10 @@ Windows：
 
 >git clone https://github.com/gmarik/Vundle.vim.git %HOMEPATH%/vimfiles/bundle/Vundle.vim
 
+
 PluginList was shown in vimrc file.
 
+
+Install Plugins
+
+>:PluginInstall
