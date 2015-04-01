@@ -51,7 +51,7 @@ set nocompatible
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
-set history=700
+set history=50
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -313,6 +313,9 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
+
+" List of directory names for the swap file
+set directory=.,$TEMP
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
