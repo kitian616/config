@@ -55,8 +55,8 @@ set history=50
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = "\\"
-let g:mapleader = "\\"
+let mapleader = ","
+let g:mapleader = ","
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -66,51 +66,25 @@ let g:mapleader = "\\"
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Multi-encoding settings, MUST BE IN THE BEGINNING OF .vimrc!
+" Multi_language setting
+" default encoding UTF8
 if has("multi_byte")
-    " When 'fileencodings' starts with 'ucs-bom', don't do this manually
-    "set bomb
-    set fileencodings=ucs-bom,utf-8,chinese,taiwan,japan,korea,latin1
-    " CJK environment detection and corresponding setting
-    if v:lang =~ "^zh_CN"
-        " Simplified Chinese, on Unix euc-cn, on MS-Windows cp936
-        set encoding=chinese
-        set termencoding=chinese
-        if &fileencoding == ''
-            set fileencoding=chinese
-        endif
-        set ambiwidth=double
-    elseif v:lang =~ "^zh_TW"
-        " Traditional Chinese, on Unix euc-tw, on MS-Windows cp950
-        set encoding=taiwan
-        set termencoding=taiwan
-        if &fileencoding == ''
-            set fileencoding=taiwan
-        endif
-        set ambiwidth=double
-    elseif v:lang =~ "^ja_JP"
-        " Japanese, on Unix euc-jp, on MS-Windows cp932
-        set encoding=japan
-        set termencoding=japan
-        if &fileencoding == ''
-            set fileencoding=japan
-        endif
-        set ambiwidth=double
-    elseif v:lang =~ "^ko"
-        " Korean on Unix euc-kr, on MS-Windows cp949
-        set encoding=korea
-        set termencoding=korea
-        if &fileencoding == ''
-            set fileencoding=korea
-        endif
-        set ambiwidth=double
-    endif
-    " Detect UTF-8 locale, and override CJK setting if needed
-    if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-        set encoding=utf-8
-    endif
+  set encoding=utf-8
+  "set fenc=cp936
+  " English messages only
+  "language messages zh_CN.utf-8
+  if has('win32')
+    language chinese
+    let &termencoding=&encoding
+  endif
+  set fileencodings=ucs-bom,utf-8,chinese,taiwan,japan,korea,latin1
+  set formatoptions+=mM
+  set nobomb " 不使用Unicode签名
+  if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
+    set ambiwidth=double
+  endif
 else
-    echoerr 'Sorry, this version of (g)Vim was not compiled with "multi_byte"'
+  echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
 if has("gui_win32")
