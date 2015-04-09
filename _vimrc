@@ -51,7 +51,7 @@ set nocompatible
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
-set history=50
+set history=500
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -67,7 +67,7 @@ let g:mapleader = ","
 set backspace=indent,eol,start
 
 " Multi_language setting
-" default encoding UTF8
+" default encoding utf-8
 if has("multi_byte")
   set encoding=utf-8
   "set fenc=cp936
@@ -269,7 +269,7 @@ if has("gui_running")
     endif
 
     " Set extra options when running in GUI mode
-    set lines=35 columns=100  " window width and height
+    set lines=35 columns=110  " window width and height
     "set guioptions-=m        " no Menu
     set guioptions-=T         " no Toolbar
     set t_Co=256
@@ -369,7 +369,7 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 " tagbar.vim
 "
 " set keymap
-nnoremap <silent> <F9> :TagbarToggle<CR>
+nnoremap <silent> <F12> :TagbarToggle<CR>
 " Width of the Tagbar window
 let g:tagbar_width = 35
 " Vim window will be expanded by the width of the Tagbar window
