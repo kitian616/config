@@ -192,6 +192,11 @@ Plugin 'vim-scripts/Tagbar'
 "*Extra highlighting of typedefs, enumerations etc (based on ctags)
 Plugin 'abudden/taghighlight-automirror'
 
+"Vim plugin, insert or delete brackets, parens, quotes in pair 
+Plugin 'jiangmiao/auto-pairs'
+" Perform all your vim insert mode completions with Tab
+Plugin 'ervandew/supertab'
+
 " Plugin for C/C++
 "
 " C/C++ IDE -- Write and run programs. Insert statements, idioms, comments etc.
