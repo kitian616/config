@@ -1,25 +1,19 @@
 # .vimrc
-CT 's vimrc, language=chinese
+Thomas Tian 's vimrc, language=chinese
 
-need install vundle first!
+## install [vundle](https://github.com/gmarik/Vundle.vim)
 
-homepage : https://github.com/gmarik/Vundle.vim
+**Linux/Unix**
 
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-Set up Vundle:
+**Windows**
 
-Linux/Unix:
-
->git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-Windows：
-
->git clone https://github.com/gmarik/Vundle.vim.git %HOMEPATH%/vimfiles/bundle/Vundle.vim
+  git clone https://github.com/gmarik/Vundle.vim.git %HOMEPATH%/vimfiles/bundle/Vundle.vim
 
 
 PluginList was shown in vimrc file.
 
+## Install Plugins
 
-Install Plugins
-
->:PluginInstall
+  :PluginInstall
