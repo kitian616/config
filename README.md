@@ -5,14 +5,14 @@ Thomas Tian 's vimrc, language=chinese
 
 **Linux/Unix**
 
-```bash
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
+
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 
 **Windows**
-```bash
-git clone https://github.com/gmarik/Vundle.vim.git %HOMEPATH%/vimfiles/bundle/Vundle.vim
-```
+
+> git clone https://github.com/gmarik/Vundle.vim.git %HOMEPATH%/vimfiles/bundle/Vundle.vim
+
 
 PluginList was shown in vimrc file.
 
