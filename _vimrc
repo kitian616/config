@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer:
-"       ChiTien
+"       Thomas Tian
 "       kitian616@outlook.com
 "       https://github.com/kitian616/vimrc
 "
