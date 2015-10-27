@@ -1,5 +1,5 @@
 # .vimrc
-[Thomas Tian](http://kitian616.github.io)'s VIM configuration file, language = chinese
+[Thomas Tian](http://www.thomastian.com)'s VIM configuration file, language = chinese
 
 ## install [vundle](https://github.com/gmarik/Vundle.vim)
 **Linux/Unix**
