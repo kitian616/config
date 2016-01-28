@@ -179,26 +179,24 @@ Plugin 'gmarik/Vundle.vim'
 "
 " precision color scheme for multiple applications (terminal, vim, etc.)
 " with both dark/light modes
-Plugin 'altercation/solarized', {'rtp': 'vim-colors-solarized'}
+Plugin 'altercation/vim-colors-solarized'
 " aireline , a powerline
 Plugin 'bling/vim-airline'
 
 " Plugin for CODE READING.
 "
-" Alternate Files quickly (.c --> .h etc)
-Plugin 'vim-scripts/a.vim'
-" Display tags of the current file
-Plugin 'vim-scripts/Tagbar'
 "*Extra highlighting of typedefs, enumerations etc (based on ctags)
 Plugin 'abudden/taghighlight-automirror'
 
+" Display tags of the current file
+Plugin 'vim-scripts/Tagbar'
 "Vim plugin, insert or delete brackets, parens, quotes in pair 
 Plugin 'jiangmiao/auto-pairs'
-" Perform all your vim insert mode completions with Tab
-Plugin 'ervandew/supertab'
 
 " Plugin for C/C++
 "
+" Alternate Files quickly (.c --> .h etc)
+Plugin 'vim-scripts/a.vim'
 " C/C++ IDE -- Write and run programs. Insert statements, idioms, comments etc.
 Plugin 'vim-scripts/c.vim'
 " Additional Vim syntax highlighting for C++ (including C++11/14)
@@ -228,8 +226,8 @@ Plugin 'mattn/emmet-vim'
 "
 " Intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
-" Turns simple structured data into nice-looking tables
-Plugin 'Stormherz/tablify'
+" Perform all your vim insert mode completions with Tab
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
