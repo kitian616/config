@@ -181,7 +181,8 @@ Plugin 'gmarik/Vundle.vim'
 " with both dark/light modes
 Plugin 'altercation/vim-colors-solarized'
 " aireline , a powerline
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Plugin for CODE READING.
 "
@@ -266,14 +267,16 @@ if has("gui_running")
     " Set font according to syste
     if has("gui_gtk2")
         set guifont=DejaVu\ Sans\ Mono\ 11,Fixed\ 11
-        set guifontwide=WenQuanYi\ Zen\ Hei\ 12
+        set guifontwide=WenQuanYi\ Zen\ Hei\ 12,PingFang\ SC\ 12
     elseif has("x11")
         " Also for GTK 1
         set guifont=*-lucidatypewriter-medium-r-normal-*-*-180-*-*-m-*-*
     elseif has("gui_win32")
         set guifont=Consolas:h11:cANSI,Source_Code_Pro:h11:cANSI
         set guifontwide=YouYuan:h12:cGB2312,NSimSun:h12:cGB2312
-    "elseif has("gui_macvim")
+    elseif has("gui_macvim")
+        set guifont=Menlos:h11,Monaco:h11
+        set guifontwide=PingFang:h12,STHeiti:h12
     endif
 
     " Set extra options when running in GUI mode
