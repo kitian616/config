@@ -1,4 +1,4 @@
-[Thomas Tian](http://www.thomastian.com)'s config files, inclue zsh, vim
+[Thomas Tian](http://www.thomastian.com)'s config files, include zsh, vim
 
 ## vim
 
