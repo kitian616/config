@@ -1,6 +1,8 @@
 # vim配置说明
 
-[Thomas Tian](http://www.thomastian.com)'s VIM configuration file, language = chinese
+[Tian Qi (Thomas Tian)](http://www.thomastian.com)'s VIM configuration file, language = chinese
+
+使用 solarized 主题，配合 airline 插件。
 
 ## install [vundle](https://github.com/gmarik/Vundle.vim)
 

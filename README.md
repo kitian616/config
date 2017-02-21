@@ -77,3 +77,9 @@ $ git clone https://github.com/kitian616/config.git ~/.
 $ ln -s ./.ct_config/vim/_vimrc ./.vimrc
 $ ln -s ./.ct_config/zsh/_zshrc ./.zshrc
 ```
+
+## 更新
+
+```
+$ cd ~/.ct_config && git pull && cd -
+```

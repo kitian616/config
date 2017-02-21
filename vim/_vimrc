@@ -5,7 +5,7 @@
 "       https://github.com/kitian616/config
 "
 " Version:
-"       2.0.2 - 02/21/2016
+"       2.1.1 - 02/21/2016
 "
 " How To Use:
 " To use it, copy it to
@@ -340,6 +340,9 @@ let g:airline_theme='luna'
 "
 " enable tabline
 let g:airline#extensions#tabline#enabled = 1
+
+" enable Powerline fonts
+"let g:airline_powerline_fonts = 1
 
 " display numbers in the tabline
 let g:airline#extensions#tabline#buffer_idx_mode = 1
