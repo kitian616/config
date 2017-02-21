@@ -70,5 +70,7 @@ eval "$(rbenv init -)"
 在进行了上述的步骤和每个配置的步骤之后就可以使用该配置了。
 
 ```
-git clone https://github.com/kitian616/config.git ~/.ct_config
+git clone https://github.com/kitian616/config.git ~/.
+ln -s ./.ct_config/vim/_vimrc ./.vimrc
+ln -s ./.ct_config/zsh/_zshrc ./.zshrc
 ```
