@@ -5,30 +5,30 @@
 ### macOS
 
 ```
-brew install zsh zsh-completions
+$ brew install zsh zsh-completions
 ```
 
 ### Ubuntu, Debian
 
 ```
-apt install zsh
+$ apt install zsh
 ```
 
 ### Arch Linux
 
 ```
-pacman -S zsh
+$ pacman -S zsh
 ```
 
 ## install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 ## 安装 Powerline 字体
 
-由于在`.zshrc`使用了`agnoster`主题，该主题依赖 Powerline fonts 字体，因此需要安装并在终端中配饰 Powerline 字体。
+因为在`.zshrc`使用了`agnoster`主题，而该主题依赖 Powerline 字体，所以需要安装并在终端中配置该字体。
 
 附：[安装文档](https://github.com/powerline/fonts)
 

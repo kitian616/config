@@ -8,31 +8,31 @@
 
 node，python 和 ruby 是很多开源工具所依赖的环境，最好一开始就将这些环境配置好。当然还有 gcc，g++，make 这样的工具，这些工具在 unix/linux 上都是很同意获得的。
 
-java 也有类似的版本管理工具，当时并不提供下载的功能。
+java 也有类似的版本管理工具[jenv](https://github.com/gcuisinier/jenv)，但它并不提供下载的功能。
 
 #### macOS
 
 ```
-brew install nvm
-brew install pyenv
-brew install rbenv
+$ brew install nvm
+$ brew install pyenv
+$ brew install rbenv
 ```
 
 #### Ubuntu, Debian
 
 ```
-apt install nvm
-apt install pyenv
-apt install rbenv
+$ apt install nvm
+$ apt install pyenv
+$ apt install rbenv
 ```
 
 #### Arch Linux
 
 ```
-pacman -S zsh
-pacman -S nvm
-pacman -S pyenv
-pacman -S rbenv
+$ pacman -S zsh
+$ pacman -S nvm
+$ pacman -S pyenv
+$ pacman -S rbenv
 ```
 
 #### 终端环境的配置
@@ -64,13 +64,16 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
 
+## vim，zsh的配置
+
+见 vim， zsh 目录 README。
 
 ## 安装
 
 在进行了上述的步骤和每个配置的步骤之后就可以使用该配置了。
 
 ```
-git clone https://github.com/kitian616/config.git ~/.
-ln -s ./.ct_config/vim/_vimrc ./.vimrc
-ln -s ./.ct_config/zsh/_zshrc ./.zshrc
+$ git clone https://github.com/kitian616/config.git ~/.
+$ ln -s ./.ct_config/vim/_vimrc ./.vimrc
+$ ln -s ./.ct_config/zsh/_zshrc ./.zshrc
 ```
