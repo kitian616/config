@@ -1,5 +1,7 @@
 # zsh配置说明
 
+![screenshot](https://github.com/kitian616/config/blob/master/zsh/screenshot.png?raw=true)
+
 ## install zsh
 
 ### macOS

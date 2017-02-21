@@ -4,6 +4,8 @@
 
 使用 solarized 主题，配合 airline 插件。
 
+![screenshot](https://github.com/kitian616/config/blob/master/vim/screenshot.png?raw=true)
+
 ## install [vundle](https://github.com/gmarik/Vundle.vim)
 
 ```
