@@ -1,0 +1,29 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "my configuration files",
+  "main": "''",
+  "scripts": {
+    "csscomb": "csscomb -c ./lint/csscomb/.csscomb.json ./lint/csscomb/test.css",
+    "eslint": "eslint -c ./lint/eslint/.eslintrc ./lint/eslint/test.js",
+    "htmlhint": "htmlhint -c ./lint/htmlhint/.htmlhintrc ./lint/htmlhint/test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitian616/config.git"
+  },
+  "keywords": [
+    "congif"
+  ],
+  "author": "Tian Qi (Thomas Tian)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kitian616/config/issues"
+  },
+  "homepage": "https://github.com/kitian616/config#readme",
+  "devDependencies": {
+    "csscomb": "^4.0.1",
+    "eslint": "^3.16.1",
+    "htmlhint": "^0.9.13"
+  }
+}

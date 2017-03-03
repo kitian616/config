@@ -1,0 +1,12 @@
+.a,
+.b,
+.c {
+display: block;
+
+margin: 10px;
+
+color: #ccc;
+}
+.b {
+color: #eee;
+}
