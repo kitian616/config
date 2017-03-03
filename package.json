@@ -2,11 +2,12 @@
   "name": "config",
   "version": "1.0.0",
   "description": "my configuration files",
-  "main": "''",
+  "main": "",
   "scripts": {
-    "csscomb": "csscomb -c ./lint/csscomb/.csscomb.json ./lint/csscomb/test.css",
-    "eslint": "eslint -c ./lint/eslint/.eslintrc ./lint/eslint/test.js",
-    "htmlhint": "htmlhint -c ./lint/htmlhint/.htmlhintrc ./lint/htmlhint/test.html"
+    "test": "npm run csscomb && npm run eslint && npm run htmlhint",
+    "csscomb": "csscomb -c ./lint/csscomb/_csscomb.json ./lint/csscomb/test.css",
+    "eslint": "eslint -c ./lint/eslint/_eslintrc ./lint/eslint/test.js",
+    "htmlhint": "htmlhint -c ./lint/htmlhint/_htmlhintrc ./lint/htmlhint/test.html"
   },
   "repository": {
     "type": "git",
