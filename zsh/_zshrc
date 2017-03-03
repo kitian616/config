@@ -106,3 +106,4 @@ export DEFAULT_USER=`whoami`
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias shs="python -m SimpleHTTPServer"
