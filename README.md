@@ -78,6 +78,10 @@ $ ln -s ./.ct_config/vim/_vimrc ./.vimrc
 $ ln -s ./.ct_config/zsh/_zshrc ./.zshrc
 ```
 
+## hint的配置
+
+见 lint 目录的 READEME。
+
 ## 更新
 
 ```
