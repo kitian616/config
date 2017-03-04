@@ -1,30 +1,30 @@
 {
-  "name": "config",
-  "version": "1.0.0",
-  "description": "my configuration files",
-  "main": "",
-  "scripts": {
-    "test": "npm run csscomb && npm run eslint && npm run htmlhint",
-    "csscomb": "csscomb -c ./lint/csscomb/_csscomb.json ./lint/csscomb/test.css",
-    "eslint": "eslint -c ./lint/eslint/_eslintrc ./lint/eslint/test.js",
-    "htmlhint": "htmlhint -c ./lint/htmlhint/_htmlhintrc ./lint/htmlhint/test.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kitian616/config.git"
-  },
-  "keywords": [
-    "congif"
-  ],
-  "author": "Tian Qi (Thomas Tian)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kitian616/config/issues"
-  },
-  "homepage": "https://github.com/kitian616/config#readme",
-  "devDependencies": {
-    "csscomb": "^4.0.1",
-    "eslint": "^3.16.1",
-    "htmlhint": "^0.9.13"
-  }
+    "name": "config",
+    "version": "1.0.0",
+    "description": "my configuration files",
+    "main": "",
+    "scripts": {
+        "test": "npm run csscomb && npm run eslint && npm run htmlhint",
+        "csscomb": "csscomb -c ./lint/csscomb/_csscomb.json ./lint/csscomb/test.css",
+        "eslint": "eslint -c ./lint/eslint/_eslintrc ./lint/eslint/test.js",
+        "htmlhint": "htmlhint -c ./lint/htmlhint/_htmlhintrc ./lint/htmlhint/test.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kitian616/config.git"
+    },
+    "keywords": [
+        "congif"
+    ],
+    "author": "Tian Qi (Thomas Tian)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kitian616/config/issues"
+    },
+    "homepage": "https://github.com/kitian616/config#readme",
+    "devDependencies": {
+        "csscomb": "^4.0.1",
+        "eslint": "^3.16.1",
+        "htmlhint": "^0.9.13"
+    }
 }
