@@ -29,7 +29,6 @@ $ apt install rbenv
 #### Arch Linux
 
 ```
-$ pacman -S zsh
 $ pacman -S nvm
 $ pacman -S pyenv
 $ pacman -S rbenv
@@ -37,7 +36,7 @@ $ pacman -S rbenv
 
 #### 终端环境的配置
 
-为了能够使用上述的工具，需要对终端环境(bash/zsh)进行配置。（该配置集中的 zshrc 已经对它们进行了配置）
+为了能够使用上述的工具，需要对终端环境(bash/zsh)进行配置。（zshrc 文件已经对它们进行了配置）
 
 ##### nvm
 
