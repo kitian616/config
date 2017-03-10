@@ -1,13 +1,10 @@
 .a, .b, .c {
-    font-size: .9px;
-
+    font-size: 0.9px;
+    color: #cccccc;
+    margin: 10PX;
+  padding: 0PX;
     display: block;
-
-    margin: 10px;
-    padding: 0;
-
-    color: #ccc;
 }
 .b {
-    color: #eee;
+    color: #EEEEE;
 }

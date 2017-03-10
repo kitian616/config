@@ -8,9 +8,9 @@
     "color-case": "lower",
     "color-shorthand": true,
     "element-case": "lower",
-    "leading-zero": false, // 移除小数点前的 0
+    "leading-zero": false,
     "remove-empty-rulesets": true,
-    "unitless-zero": true, // 移除 0值 的单位
+    "unitless-zero": true,
     "sort-order": [
         [
             "font",
