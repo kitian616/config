@@ -16,7 +16,7 @@ const defaultProps = {
     data: [
         {text: '', value: 0}
     ],
-    onChange: (value) => {},
+    onChange: () => {},
     value: []
 }
 

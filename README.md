@@ -75,6 +75,9 @@ eval "$(rbenv init -)"
 $ git clone https://github.com/kitian616/config.git ~/.tq_config
 $ ln -s ~/.tq_config/vim/_vimrc ~/.vimrc
 $ ln -s ~/.tq_config/zsh/_zshrc ~/.zshrc
+$ ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
+$ ln -s ~/.tq_config/lint/csscomb/_csscomb.json ~/.csscomb.json
+$ ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
 ```
 
 ## hint的配置
