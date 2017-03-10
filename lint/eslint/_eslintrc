@@ -3,7 +3,10 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jest": true,
+        "jquery": true
+
     },
     "parserOptions": {
         "ecmaFeatures": {
@@ -23,7 +26,5 @@
         "constructor-super": "warn",
         "valid-typeof": "warn"
     },
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "globals": [
-    ]
+    "extends": ["eslint:recommended", "plugin:react/recommended"]
 }
