@@ -8,11 +8,9 @@
     "color-case": "lower",
     "color-shorthand": true,
     "element-case": "lower",
-
-    "leading-zero": false,
+    "leading-zero": false, // 移除小数点前的 0
     "remove-empty-rulesets": true,
-    "unitless-zero": true,
-    "vendor-prefix-align": true,
+    "unitless-zero": true, // 移除 0值 的单位
     "sort-order": [
         [
             "font",
