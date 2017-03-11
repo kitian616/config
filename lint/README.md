@@ -5,13 +5,13 @@
 ### 安装
 
 ```
-$ npm install -g HTMLHint
+$ npm install htmlhint -g
 ```
 
 ## csscomb
 
 ```
-$ npm install -g HTMLHint
+$ npm install csscomb -g
 ```
 
 ## eslint
@@ -21,5 +21,5 @@ $ npm install -g HTMLHint
 为了支持 react，使用了 eslint-plugin-react 插件。
 
 ```
-$ npm install -g eslint eslint-plugin-react
+$ npm install eslint eslint-plugin-react -g
 ```
