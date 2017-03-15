@@ -20,7 +20,7 @@
     "rules": {
         "semi": ["error", "always"],
         "jsx-quotes": ["error", "prefer-double"],
-        "quotes": ["error", "double"],
+        "quotes": ["error", "single"],
 
         "array-callback-return": "error",
         "block-scoped-var": "error",
