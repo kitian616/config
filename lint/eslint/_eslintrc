@@ -18,6 +18,19 @@
         "react"
     ],
     "rules": {
+        "semi": ["error", "always"],
+        "jsx-quotes": ["error", "prefer-double"],
+        "quotes": ["error", "double"],
+
+        "array-callback-return": "error",
+        "block-scoped-var": "error",
+        "class-methods-use-this": "error",
+        "default-case": "error",
+        "no-extra-bind": "error",
+        "camelcase": "error",
+
+        "init-declarations": ["error", "always"],
+
         "no-console": "off"
     },
     "extends": ["eslint:recommended", "plugin:react/recommended"]
