@@ -30,7 +30,18 @@
         "no-extra-bind": "error",
         "camelcase": "error",
 
-        "init-declarations": ["error", "always"]
+        "init-declarations": ["error", "always"],
+
+        "arrow-spacing": "error",
+        "no-confusing-arrow": "error",
+        "no-duplicate-imports": "error",
+        "no-useless-constructor": "error",
+        "no-var": "error",
+        "prefer-const": "error",
+        "prefer-destructuring": ["error", {
+            "array": true,
+            "object": true
+        }]
 
     },
     "extends": ["eslint:recommended", "plugin:react/recommended"]
