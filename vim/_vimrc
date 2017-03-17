@@ -191,7 +191,7 @@ Plugin 'abudden/taghighlight-automirror'
 
 " Display tags of the current file
 Plugin 'vim-scripts/Tagbar'
-"Vim plugin, insert or delete brackets, parens, quotes in pair 
+"Vim plugin, insert or delete brackets, parens, quotes in pair
 Plugin 'jiangmiao/auto-pairs'
 
 " Plugin for C/C++
