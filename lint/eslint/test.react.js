@@ -10,7 +10,7 @@ const propTypes = {
     ),
     onChange: PropTypes.func,
     value: PropTypes.array
-}
+};
 
 const defaultProps = {
     data: [
@@ -18,7 +18,7 @@ const defaultProps = {
     ],
     onChange: () => {},
     value: []
-}
+};
 
 class CheckboxGroup extends Component {
 

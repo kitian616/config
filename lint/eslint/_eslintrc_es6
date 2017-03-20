@@ -37,12 +37,7 @@
         "no-duplicate-imports": "error",
         "no-useless-constructor": "error",
         "no-var": "error",
-        "prefer-const": "error",
-        "prefer-destructuring": ["error", {
-            "array": true,
-            "object": true
-        }]
-
+        "prefer-const": "error"
     },
     "extends": ["eslint:recommended", "plugin:react/recommended"]
 }
