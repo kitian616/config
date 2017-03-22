@@ -98,6 +98,9 @@ eval "$(rbenv init -)"
 # don't display username and hostname
 export DEFAULT_USER=`whoami`
 
+# homebrew
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
