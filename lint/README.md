@@ -18,8 +18,9 @@ $ npm install csscomb -g
 
 ### 安装
 
-为了支持 react，使用了 eslint-plugin-react 插件。
+`_eslintrc_es7`配置文件为了支持最新的 ES7 语法和 react开发，使用了 babel-eslin parser 和 eslint-plugin-react 插件。
 
 ```
+$ npm install babel-eslint -g
 $ npm install eslint eslint-plugin-react -g
 ```

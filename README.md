@@ -67,9 +67,11 @@ eval "$(rbenv init -)"
 
 见 vim， zsh 目录 README。
 
-## 安装
+## 安装配置
 
 在进行了上述的步骤和每个配置的步骤之后就可以使用该配置了。
+
+当然，你也可以根据自己的喜好进行配置。
 
 ```
 $ git clone https://github.com/kitian616/config.git ~/.tq_config
@@ -79,9 +81,11 @@ $ ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
 $ ln -s ~/.tq_config/lint/csscomb/_csscomb.json ~/.csscomb.json
 $ ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
 ```
+
 带 ES6 规则和 es7 支持的 eslint 文件。
+
 ```
-$ ln -s ~/.tq_config/lint/eslint/_eslintrc_es6 ~/.eslintrc_es7
+$ ln -s ~/.tq_config/lint/eslint/_eslintrc_es7 ~/.eslintrc_es7
 ```
 
 ## hint的配置
