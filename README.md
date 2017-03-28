@@ -79,9 +79,9 @@ $ ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
 $ ln -s ~/.tq_config/lint/csscomb/_csscomb.json ~/.csscomb.json
 $ ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
 ```
-带ES6规则的eslint文件。
+带 ES6 规则和 es7 支持的 eslint 文件。
 ```
-$ ln -s ~/.tq_config/lint/eslint/_eslintrc_es6 ~/.eslintrc_es6
+$ ln -s ~/.tq_config/lint/eslint/_eslintrc_es6 ~/.eslintrc_es7
 ```
 
 ## hint的配置
