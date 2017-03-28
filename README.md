@@ -36,7 +36,7 @@ $ pacman -S rbenv
 
 #### 终端环境的配置
 
-为了能够使用上述的工具，需要对终端环境(bash/zsh)进行配置。（zshrc 文件已经对它们进行了配置）
+为了能够使用上述的工具，需要对终端环境(bash/zsh)进行配置。（该配置的`_zshrc`文件已经对它们进行了配置）
 
 ##### nvm
 
@@ -90,7 +90,7 @@ $ ln -s ~/.tq_config/lint/eslint/_eslintrc_es7 ~/.eslintrc_es7
 
 ## hint的配置
 
-见 lint 目录的 READEME。
+见 lint 目录的`READEME`。
 
 ## 更新
 
