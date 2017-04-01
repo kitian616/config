@@ -26,6 +26,7 @@
         "semi": ["error", "always"],
         "jsx-quotes": ["error", "prefer-double"],
         "quotes": ["error", "single"],
+        "comma-dangle": ["error", "never"],
 
         "array-callback-return": "error",
         "block-scoped-var": "error",
