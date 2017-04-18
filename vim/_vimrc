@@ -187,28 +187,28 @@ Plugin 'vim-airline/vim-airline-themes'
 " Plugin for CODE READING.
 "
 "*Extra highlighting of typedefs, enumerations etc (based on ctags)
-Plugin 'abudden/taghighlight-automirror'
+"Plugin 'abudden/taghighlight-automirror'
 
 " Display tags of the current file
-Plugin 'vim-scripts/Tagbar'
+"Plugin 'vim-scripts/Tagbar'
 "Vim plugin, insert or delete brackets, parens, quotes in pair
 Plugin 'jiangmiao/auto-pairs'
 
 " Plugin for C/C++
 "
 " Alternate Files quickly (.c --> .h etc)
-Plugin 'vim-scripts/a.vim'
+"Plugin 'vim-scripts/a.vim'
 " C/C++ IDE -- Write and run programs. Insert statements, idioms, comments etc.
-Plugin 'vim-scripts/c.vim'
+"Plugin 'vim-scripts/c.vim'
 " Additional Vim syntax highlighting for C++ (including C++11/14)
-Plugin 'octol/vim-cpp-enhanced-highlight'
+"Plugin 'octol/vim-cpp-enhanced-highlight'
 " C/C++ omni-completion with ctags database
-Plugin 'vim-scripts/OmniCppComplete'
+"Plugin 'vim-scripts/OmniCppComplete'
 
 " Plugins fot Python
 "
 " python-mode. PyLint, Rope, Pydoc, breakpoints from box.
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 
 " Plugins for WEB DEVELOPMENT.
 "

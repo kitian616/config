@@ -13,7 +13,8 @@ export ZSH=~/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 if [[ $TERM_PROGRAM = "iTerm.app" ]]; then
-    ZSH_THEME="agnoster"
+    #ZSH_THEME="agnoster"
+    ZSH_THEME="ys"
 else
     ZSH_THEME="ys"
 fi
