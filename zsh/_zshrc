@@ -2,7 +2,7 @@
 # email     kitian616@outlook.com
 # github    https://github.com/kitian616/config
 #
-# Version   2.0.0 - 04/23/2017
+# Version   2.0.1 - 04/23/2017
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -39,6 +39,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/z
+    zgen oh-my-zsh plugins/extract
     zgen load zsh-users/zsh-syntax-highlighting
 
     # brew install coreutils
