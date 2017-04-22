@@ -2,7 +2,7 @@
 # email     kitian616@outlook.com
 # github    https://github.com/kitian616/config
 #
-# Version   1.0.0 - 04/23/2017
+# Version   2.0.0 - 04/23/2017
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
