@@ -44,7 +44,6 @@ if ! zgen saved; then
     # brew install coreutils
     zgen load supercrabtree/k
 
-    zgen load MichaelAquilina/zsh-emojis
     # completions
     zgen load zsh-users/zsh-completions src
 

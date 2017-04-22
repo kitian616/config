@@ -9,7 +9,7 @@
 ### macOS
 
 ```
-$ brew install zsh zsh-completions
+$ brew install zsh
 ```
 
 ### Ubuntu, Debian
@@ -22,6 +22,14 @@ $ apt install zsh
 
 ```
 $ pacman -S zsh
+```
+
+## 安装插件依赖项
+
+### macOS
+
+```
+brew install coreutils jq fzf
 ```
 
 ## zgen
