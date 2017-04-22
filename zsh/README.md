@@ -1,5 +1,7 @@
 # zsh配置说明
 
+使用 [zgen](https://github.com/tarjoilija/zgen) 来管理 zsh 插件。
+
 ![screenshot](https://github.com/kitian616/config/blob/master/zsh/screenshot.png?raw=true)
 
 ## install zsh
@@ -22,10 +24,22 @@ $ apt install zsh
 $ pacman -S zsh
 ```
 
-## install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+## zgen
 
 ```
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+zgen reset
+```
+
+### Update all plugins and reset
+
+```
+zgen update
+```
+
+### Update zgen
+
+```
+zgen selfupdate
 ```
 
 ## 安装 Powerline 字体
@@ -36,17 +50,6 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/m
 
 终端的配置，以 iTerm 为例，Preferences -> Profiles -> Text标签 -> Change Font 选择方才安装的 `... for Powerline` 系列字体。
 
-## 安装 zsh-syntax-highlighting 插件
-
-对于 oh-my-zsh 来说，官方推荐手动安装。
-
-```
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-相应的配置已经写在了该文件中。
-
-附：[安装文档](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
 ## 安装 iTerm2 color theme
 
