@@ -9,32 +9,38 @@
 ### macOS
 
 ```
-$ brew install zsh
+brew install zsh
 ```
 
 ### Ubuntu, Debian
 
 ```
-$ apt install zsh
+apt install zsh
 ```
 
 ### Arch Linux
 
 ```
-$ pacman -S zsh
-```
-
-## 安装插件依赖项
-
-### macOS
-
-```
-brew install coreutils jq fzf
+pacman -S zsh
 ```
 
 ## zgen
 
+### installation
+
+```bash
+git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 ```
+
+### plugins
+
+```bash
+brew install coreutils jq fzf
+```
+
+### reset
+
+```bash
 zgen reset
 ```
 

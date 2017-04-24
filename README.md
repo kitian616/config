@@ -13,25 +13,25 @@ java 也有类似的版本管理工具[jenv](https://github.com/gcuisinier/jenv)
 #### macOS
 
 ```
-$ brew install nvm
-$ brew install pyenv
-$ brew install rbenv
+brew install nvm
+brew install pyenv
+brew install rbenv
 ```
 
 #### Ubuntu, Debian
 
 ```
-$ apt install nvm
-$ apt install pyenv
-$ apt install rbenv
+apt install nvm
+apt install pyenv
+apt install rbenv
 ```
 
 #### Arch Linux
 
 ```
-$ pacman -S nvm
-$ pacman -S pyenv
-$ pacman -S rbenv
+pacman -S nvm
+pacman -S pyenv
+pacman -S rbenv
 ```
 
 #### 终端环境的配置
@@ -74,18 +74,18 @@ eval "$(rbenv init -)"
 当然，你也可以根据自己的喜好进行配置。
 
 ```
-$ git clone https://github.com/kitian616/config.git ~/.tq_config
-$ ln -s ~/.tq_config/vim/_vimrc ~/.vimrc
-$ ln -s ~/.tq_config/zsh/_zshrc ~/.zshrc
-$ ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
-$ ln -s ~/.tq_config/lint/csscomb/_csscomb.json ~/.csscomb.json
-$ ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
+git clone https://github.com/kitian616/config.git ~/.tq_config
+ln -s ~/.tq_config/vim/_vimrc ~/.vimrc
+ln -s ~/.tq_config/zsh/_zshrc ~/.zshrc
+ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
+ln -s ~/.tq_config/lint/csscomb/_csscomb.json ~/.csscomb.json
+ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
 ```
 
 带 ES6 规则和 es7 支持的 eslint 文件。
 
 ```
-$ ln -s ~/.tq_config/lint/eslint/_eslintrc_es7 ~/.eslintrc_es7
+ln -s ~/.tq_config/lint/eslint/_eslintrc_es7 ~/.eslintrc_es7
 ```
 
 ## hint的配置
@@ -95,5 +95,5 @@ $ ln -s ~/.tq_config/lint/eslint/_eslintrc_es7 ~/.eslintrc_es7
 ## 更新
 
 ```
-$ cd ~/.tq_config && git pull && cd -
+cd ~/.tq_config && git pull && cd -
 ```
