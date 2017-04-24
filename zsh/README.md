@@ -2,7 +2,7 @@
 
 使用 [zgen](https://github.com/tarjoilija/zgen) 来管理 zsh 插件。
 
-![screenshot](https://github.com/kitian616/config/blob/master/zsh/screenshot.png?raw=true)
+![screenshot](https://github.com/kitian616/config/blob/master/zsh/screenshot.jpg?raw=true)
 
 ## install zsh
 
