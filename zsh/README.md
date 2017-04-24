@@ -58,7 +58,7 @@ zgen selfupdate
 
 ## 安装 Powerline 字体
 
-因为在`.zshrc`使用了`agnoster`主题，而该主题依赖 Powerline 字体，所以需要安装并在终端中配置该字体。
+很多 zsh 主题都依赖 Powerline 字体，为了方便使用不同的主题，需要安装并配置好 Powerline 字体。
 
 附：[安装文档](https://github.com/powerline/fonts)
 
