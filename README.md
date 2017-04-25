@@ -4,7 +4,7 @@
 
 ### install nvm, pyenv, rbenv
 
-[nvm](https://github.com/creationix/nvm)，[pyenv](https://github.com/yyuu/pyenv)，[rbenv](https://github.com/rbenv/rbenv) 分别为 node，python，ruby 的版本管理工具，提供了版本下载安装和版本切换的功能，推荐使用这样的版本管理工具来管理 node 等开发环境。
+[nvm](https://github.com/creationix/nvm)，[pyenv](https://github.com/yyuu/pyenv)，[rbenv](https://github.com/rbenv/rbenv) 分别为 node，python，ruby 的版本管理工具，提供了版本下载安装和版本切换的功能，推荐使用这样的版本管理工具来管理 node，python，ruby 等开发环境。
 
 node，python 和 ruby 是很多开源工具所依赖的环境，最好一开始就将这些环境配置好。当然还有 gcc，g++，make 这样的工具，这些工具在 unix/linux 上都是很容易获得的。
 
