@@ -90,7 +90,7 @@ ln -s ~/.tq_config/lint/eslint/_eslintrc_es7 ~/.eslintrc_es7
 
 ## hint的配置
 
-见 lint 目录的 `READEME`。
+见 lint 目录的 READEME。
 
 ## 更新
 

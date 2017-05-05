@@ -26,6 +26,9 @@ eval "$(rbenv init -)"
 # homebrew
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
+# thefuck
+eval "$(thefuck --alias)"
+
 # zgen
 # if the init scipt doesn't exist
 if ! zgen saved; then
