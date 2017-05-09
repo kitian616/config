@@ -61,4 +61,7 @@ if ! zgen saved; then
     zgen save
 fi
 
-alias shs="python -m SimpleHTTPServer"
+# load customs cripts
+for FILE in ~/.custom_scripts/*.sh; do
+    source $FILE;
+done
