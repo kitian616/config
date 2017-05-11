@@ -1,18 +1,19 @@
-# author    Tian Qi (Thomas Tian)
-# email     kitian616@outlook.com
-# github    https://github.com/kitian616/config
-#
-# Version   2.0.1 - 04/23/2017
+## ## ##
+# Author    Tian Qi (Thomas Tian)
+# Email     kitian616@outlook.com
+# Github    https://github.com/kitian616/config
+# Version   2.0.2 - 05/11/2017
+## ## ##
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
+# homebrew
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
-
-# Yarn
-export PATH="$PATH:`yarn global bin`"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -23,10 +24,11 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# homebrew
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+# Yarn
+export PATH="$PATH:`yarn global bin`"
 
 # thefuck
+##brew install thefuck
 eval "$(thefuck --alias)"
 
 # zgen
@@ -45,23 +47,23 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/extract
     zgen load zsh-users/zsh-syntax-highlighting
 
-    # brew install coreutils
+    ##brew install coreutils
     zgen load supercrabtree/k
 
     # completions
     zgen load zsh-users/zsh-completions src
 
-    # brew install jq fzf
+    ##brew install jq fzf
     zgen load  b4b4r07/emoji-cli
 
     # theme
     zgen load denysdovhan/spaceship-zsh-theme
-    # save all to init script
 
+    # save all to init script
     zgen save
 fi
 
-# load customs cripts
+# load custom scripts
 for FILE in ~/.custom_scripts/*.sh; do
     source $FILE;
 done
