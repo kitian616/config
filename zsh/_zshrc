@@ -57,13 +57,16 @@ if ! zgen saved; then
     zgen load  b4b4r07/emoji-cli
 
     # theme
-    zgen load denysdovhan/spaceship-zsh-theme
+    # zgen load denysdovhan/spaceship-zsh-theme
+    # zgen oh-my-zsh themes/ys
+    zgen load ~/.custom_scripts/themes/ys.zsh
 
     # save all to init script
     zgen save
 fi
 
-# load custom scripts
-for FILE in ~/.custom_scripts/*.sh; do
+
+# load custom plugins
+for FILE in ~/.custom_scripts/plugins/*.sh; do
     source $FILE;
 done
