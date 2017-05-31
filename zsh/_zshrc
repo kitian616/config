@@ -5,31 +5,63 @@
 # Version   2.0.2 - 05/11/2017
 ## ## ##
 
+local _ZGEN_HOME="$HOME/.zgen"
+local _ZGEN_SH="$HOME/.zgen/zgen.zsh"
+local _NVM_HOME="$HOME/.nvm"
+local _NVM_SH="/usr/local/opt/nvm/nvm.sh"
+local _PYENV_HOME="$HOME/.pyenv"
+local _RBENV_HOME="$HOME/.rbenv"
+
+# utils
+# 0 exit
+cmd_exist() {
+    if [[ $1 ]];then
+        command $1 > /dev/null 2>&1
+        echo "$?"
+    fi
+}
+
 # load zgen
-source "${HOME}/.zgen/zgen.zsh"
+if [[ -d $_ZGEN_HOME ]] && [[ -e $_ZGEN_SH ]]; then
+    source $_ZGEN_SH
+else
+    git clone https://github.com/tarjoilija/zgen.git "$HOME/.zgen"
+fi
 
 # homebrew
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+if [[ $(cmd_exist brew) -eq 0 ]]; then
+    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+fi
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+if [[ -d $_NVM_HOME ]] && [[ -e $_NVM_SH ]]; then
+    export NVM_DIR=$_NVM_HOME
+    . "$_NVM_SH"
+fi
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if [[ -e $_PYENV_HOME ]] && [[ $(cmd_exist pyenv) -eq 0 ]]; then
+    export PYENV_ROOT=$_PYENV_HOME
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [[ -e $_RBENV_HOME ]] && [[ $(cmd_exist rbenv) -eq 0 ]]; then
+    export PATH="$_RBENV_HOME/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
 
 # Yarn
-export PATH="$PATH:`yarn global bin`"
+if [[ $(cmd_exist 'yarn -V') -eq 0 ]]; then
+    export PATH="$PATH:`yarn global bin`"
+fi
 
 # thefuck
 ##brew install thefuck
-eval "$(thefuck --alias)"
+if [[ $(cmd_exist thefuck) -eq 0 ]]; then
+    eval "$(thefuck --alias)"
+fi
 
 # zgen
 # if the init scipt doesn't exist
@@ -59,7 +91,7 @@ if ! zgen saved; then
     # theme
     # zgen load denysdovhan/spaceship-zsh-theme
     # zgen oh-my-zsh themes/ys
-    zgen load ~/.custom_scripts/themes/ys.zsh
+    zgen load ~/.custom_scripts/themes/dat-theme/dat.zsh-theme
 
     # save all to init script
     zgen save
