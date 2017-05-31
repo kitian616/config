@@ -99,6 +99,8 @@ fi
 
 
 # load custom plugins
-for FILE in ~/.custom_scripts/plugins/*.sh; do
-    source $FILE;
-done
+if [[ -d ~/.custom_scripts/plugins ]]; then
+    for FILE in ~/.custom_scripts/plugins/*.sh; do
+        source $FILE;
+    done
+fi
