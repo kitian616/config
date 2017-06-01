@@ -5,12 +5,15 @@
 # Version   2.0.2 - 05/11/2017
 ## ## ##
 
-local _ZGEN_HOME="$HOME/.zgen"
-local _ZGEN_SH="$HOME/.zgen/zgen.zsh"
 local _NVM_HOME="$HOME/.nvm"
 local _NVM_SH="/usr/local/opt/nvm/nvm.sh"
 local _PYENV_HOME="$HOME/.pyenv"
 local _RBENV_HOME="$HOME/.rbenv"
+
+local CUSTOM_PLUGINS_PATH="~/.custom_scripts/plugins"
+
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 # utils
 # 0 exit
@@ -20,13 +23,6 @@ cmd_exist() {
         echo "$?"
     fi
 }
-
-# load zgen
-if [[ -d $_ZGEN_HOME ]] && [[ -e $_ZGEN_SH ]]; then
-    source $_ZGEN_SH
-else
-    git clone https://github.com/tarjoilija/zgen.git "$HOME/.zgen"
-fi
 
 # homebrew
 if [[ $(cmd_exist brew) -eq 0 ]]; then
@@ -63,39 +59,30 @@ if [[ $(cmd_exist thefuck) -eq 0 ]]; then
     eval "$(thefuck --alias)"
 fi
 
-# zgen
-# if the init scipt doesn't exist
-if ! zgen saved; then
-    echo "Creating a zgen save"
+# zplug
+source ~/.zplug/init.zsh
 
-    zgen oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/sudo", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "plugins/z", from:oh-my-zsh
+zplug "plugins/extract", from:oh-my-zsh
 
-    # plugins
-    zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh plugins/colored-man-pages
-    zgen oh-my-zsh plugins/z
-    zgen oh-my-zsh plugins/extract
-    zgen load zsh-users/zsh-syntax-highlighting
+zplug "zsh-users/zsh-syntax-highlighting"
 
-    ##brew install coreutils
-    zgen load supercrabtree/k
+zplug "kitian616/tq-zsh-theme", as:theme
 
-    # completions
-    zgen load zsh-users/zsh-completions src
-
-    ##brew install jq fzf
-    zgen load  b4b4r07/emoji-cli
-
-    # theme
-    # zgen load denysdovhan/spaceship-zsh-theme
-    # zgen oh-my-zsh themes/ys
-    zgen load ~/.custom_scripts/themes/dat-theme/dat.zsh-theme
-
-    # save all to init script
-    zgen save
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug installz
+    fi
 fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
 
 
 # load custom plugins
