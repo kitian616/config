@@ -60,16 +60,25 @@ if [[ $(cmd_exist thefuck) -eq 0 ]]; then
 fi
 
 # zplug
-source ~/.zplug/init.zsh
 
-zplug "plugins/git", from:oh-my-zsh
+# see https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins for oh-my-zsh themes document.
+zplug "lib/theme-and-appearance", from:oh-my-zsh
+zplug "lib/directories", from:oh-my-zsh
+
+zplug "plugins/z", from:oh-my-zsh
+# clipcopy - Copy data to clipboard
+# Usage:
+#  <command> | clipcopy    - copies stdin to clipboard
+#  clipcopy <file>         - copies a file's contents to clipboard
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/extract", from:oh-my-zsh
+
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
-zplug "plugins/z", from:oh-my-zsh
-zplug "plugins/extract", from:oh-my-zsh
-
 zplug "zsh-users/zsh-syntax-highlighting"
+
+zplug "plugins/git", from:oh-my-zsh
 
 zplug "kitian616/tq-zsh-theme", as:theme
 
