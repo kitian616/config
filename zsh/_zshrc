@@ -58,19 +58,28 @@ if [[ $(cmd_exist thefuck) -eq 0 ]]; then
     eval "$(thefuck --alias)"
 fi
 
-# zplug
+# auto install Vundle
+if [[ ! -e "$_VUNDLE_HOME" ]]; then
+    echo "install Vundle."
+    git clone https://github.com/VundleVim/Vundle.vim.git $_VUNDLE_HOME
+fi
+
+# change default shell to ZSH
+if [[ ! $SHELL == *zsh* ]]; then
+    echo "change default shell to ZSH."
+    chsh -s $(which zsh)
+fi
+
+
+## zplug
 if [[ -e "$_ZPLUG_HOME/init.zsh" ]]; then
     export ZPLUG_HOME=$_ZPLUG_HOME
     source $_ZPLUG_HOME/init.zsh
 else
     if [[ $(cmd_exist zplug) -ne 0 ]]; then
+        echo "install zplug."
         git clone https://github.com/zplug/zplug $_ZPLUG_HOME
     fi
-fi
-
-# Vundle
-if [[ ! -e "$_VUNDLE_HOME" ]]; then
-    git clone https://github.com/VundleVim/Vundle.vim.git $_VUNDLE_HOME
 fi
 
 # see https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins for oh-my-zsh themes document.
@@ -83,12 +92,14 @@ zplug "plugins/z", from:oh-my-zsh
 #  <command> | clipcopy    - copies stdin to clipboard
 #  clipcopy <file>         - copies a file's contents to clipboard
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/completion", from:oh-my-zsh
 zplug "plugins/extract", from:oh-my-zsh
 
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-completions"
 
 zplug "plugins/git", from:oh-my-zsh
 
