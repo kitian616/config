@@ -58,7 +58,7 @@ if [[ $(cmd_exist thefuck) -eq 0 ]]; then
 fi
 
 # zplug
-if [[ -e $_ZPLUG_HOME/init.zsh ]]; then
+if [[ -e "$_ZPLUG_HOME/init.zsh" ]]; then
         export ZPLUG_HOME=$_ZPLUG_HOME
         source $_ZPLUG_HOME/init.zsh
 else
