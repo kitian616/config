@@ -103,7 +103,8 @@ zplug "zsh-users/zsh-completions"
 
 zplug "plugins/git", from:oh-my-zsh
 
-zplug "kitian616/tq-zsh-theme", as:theme
+# zplug "kitian616/tq-zsh-theme", as:theme
+zplug "~/Workspace/github/tq-zsh-theme", as:theme, from:local, use:"tq.zsh-theme"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
