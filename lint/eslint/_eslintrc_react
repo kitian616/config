@@ -15,6 +15,9 @@
         },
         "sourceType": "module"
     },
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "strict": 0,
 
@@ -40,5 +43,5 @@
         "no-var": "error",
         "prefer-const": "error"
     },
-    "extends": ["eslint:recommended"]
+    "extends": ["eslint:recommended", "plugin:react/recommended"]
 }

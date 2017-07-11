@@ -5,13 +5,13 @@
 # Version   2.0.2 - 05/11/2017
 ## ## ##
 
-local _ZPLUG_HOME="$HOME/.zplug"
-local _VUNDLE_HOME="$HOME/.vim/bundle/Vundle.vim"
-local _NVM_HOME="$HOME/.nvm"
-local _NVM_SH="/usr/local/opt/nvm/nvm.sh"
-local _PYENV_HOME="$HOME/.pyenv"
-local _RBENV_HOME="$HOME/.rbenv"
-local CUSTOM_PLUGINS_PATH="~/.custom_scripts/plugins"
+local TQ_ZPLUG_HOME="$HOME/.zplug"
+local TQ_VUNDLE_HOME="$HOME/.vim/bundle/Vundle.vim"
+local TQ_NVM_HOME="$HOME/.nvm"
+local TQ_NVM_SH="/usr/local/opt/nvm/nvm.sh"
+local TQ_PYENV_HOME="$HOME/.pyenv"
+local TQ_RBENV_HOME="$HOME/.rbenv"
+local TQ_CUSTOM_PLUGINS_HOME="$HOME/.custom_scripts/plugins"
 
 
 # utils
@@ -29,21 +29,21 @@ if [[ $(cmd_exist brew) -eq 0 ]]; then
 fi
 
 # nvm
-if [[ -d $_NVM_HOME ]] && [[ -e $_NVM_SH ]]; then
-    export NVM_DIR=$_NVM_HOME
-    . "$_NVM_SH"
+if [[ -d $TQ_NVM_HOME ]] && [[ -e $TQ_NVM_SH ]]; then
+    export NVM_DIR=$TQ_NVM_HOME
+    . "$TQ_NVM_SH"
 fi
 
 # pyenv
-if [[ -e $_PYENV_HOME ]] && [[ $(cmd_exist pyenv) -eq 0 ]]; then
-    export PYENV_ROOT=$_PYENV_HOME
+if [[ -e $TQ_PYENV_HOME ]] && [[ $(cmd_exist pyenv) -eq 0 ]]; then
+    export PYENV_ROOT=$TQ_PYENV_HOME
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 fi
 
 # rbenv
-if [[ -e $_RBENV_HOME ]] && [[ $(cmd_exist rbenv) -eq 0 ]]; then
-    export PATH="$_RBENV_HOME/bin:$PATH"
+if [[ -e $TQ_RBENV_HOME ]] && [[ $(cmd_exist rbenv) -eq 0 ]]; then
+    export PATH="$TQ_RBENV_HOME/bin:$PATH"
     eval "$(rbenv init -)"
 fi
 
@@ -59,9 +59,9 @@ if [[ $(cmd_exist thefuck) -eq 0 ]]; then
 fi
 
 # auto install Vundle
-if [[ ! -e "$_VUNDLE_HOME" ]]; then
+if [[ ! -e "$TQ_VUNDLE_HOME" ]]; then
     echo "install Vundle."
-    git clone https://github.com/VundleVim/Vundle.vim.git $_VUNDLE_HOME
+    git clone https://github.com/VundleVim/Vundle.vim.git $TQ_VUNDLE_HOME
 fi
 
 # change default shell to ZSH
@@ -72,13 +72,13 @@ fi
 
 
 ## zplug
-if [[ -e "$_ZPLUG_HOME/init.zsh" ]]; then
-    export ZPLUG_HOME=$_ZPLUG_HOME
-    source $_ZPLUG_HOME/init.zsh
+if [[ -e "$TQ_ZPLUG_HOME/init.zsh" ]]; then
+    export ZPLUG_HOME=$TQ_ZPLUG_HOME
+    source $TQ_ZPLUG_HOME/init.zsh
 else
     if [[ $(cmd_exist zplug) -ne 0 ]]; then
         echo "install zplug."
-        git clone https://github.com/zplug/zplug $_ZPLUG_HOME
+        git clone https://github.com/zplug/zplug $TQ_ZPLUG_HOME
     fi
 fi
 
@@ -104,6 +104,9 @@ zplug "zsh-users/zsh-completions"
 zplug "plugins/git", from:oh-my-zsh
 
 # zplug "kitian616/tq-zsh-theme", as:theme
+TQZT_TIMER_TIME_TABLE="\
+21-24, 0-3; ✨
+12-14; 🍚"
 zplug "~/Workspace/github/tq-zsh-theme", as:theme, from:local, use:"tq.zsh-theme"
 
 # Install plugins if there are plugins that have not been installed
@@ -119,8 +122,8 @@ zplug load --verbose > /dev/null
 
 
 # load custom plugins
-if [[ -d ~/.custom_scripts/plugins ]]; then
-    for FILE in ~/.custom_scripts/plugins/*.sh; do
-        source $FILE;
+if [[ -d ${TQ_CUSTOM_PLUGINS_HOME} ]]; then
+    for custom_plugins_path in ${TQ_CUSTOM_PLUGINS_HOME}/*.sh; do
+        source $custom_plugins_path;
     done
 fi
