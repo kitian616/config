@@ -100,6 +100,7 @@ zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
+zplug "plugins/docker", from:oh-my-zsh
 
 zplug "plugins/git", from:oh-my-zsh
 
@@ -113,7 +114,7 @@ zplug "~/Workspace/github/tq-zsh-theme", as:theme, from:local, use:"tq.zsh-theme
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
-        echo; zplug installz
+        echo; zplug install
     fi
 fi
 

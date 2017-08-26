@@ -8,19 +8,19 @@
 
 ### macOS
 
-```
+```bash
 brew install zsh
 ```
 
 ### Ubuntu, Debian
 
-```
+```bash
 apt install zsh
 ```
 
 ### Arch Linux
 
-```
+```bash
 pacman -S zsh
 ```
 
@@ -46,13 +46,13 @@ zgen reset
 
 ### Update all plugins and reset
 
-```
+```bash
 zgen update
 ```
 
 ### Update zgen
 
-```
+```bash
 zgen selfupdate
 ```
 
@@ -63,7 +63,6 @@ zgen selfupdate
 附：[安装文档](https://github.com/powerline/fonts)
 
 终端的配置，以 iTerm 为例，Preferences -> Profiles -> Text标签 -> Change Font 选择方才安装的 `... for Powerline` 系列字体。
-
 
 ## 安装 iTerm2 color theme
 
