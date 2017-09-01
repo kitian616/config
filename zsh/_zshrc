@@ -86,7 +86,8 @@ fi
 zplug "lib/theme-and-appearance", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
 
-zplug "plugins/z", from:oh-my-zsh
+zplug "rupa/z", use:z.sh
+# zplug "plugins/z", from:oh-my-zsh
 # clipcopy - Copy data to clipboard
 # Usage:
 #  <command> | clipcopy    - copies stdin to clipboard
