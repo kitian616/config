@@ -103,7 +103,7 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 zplug "plugins/docker", from:oh-my-zsh
 
-zplug "plugins/git", from:oh-my-zsh
+# zplug "plugins/git", from:oh-my-zsh
 
 # zplug "kitian616/tq-zsh-theme", as:theme
 TQZT_TIMER_TIME_TABLE="\
