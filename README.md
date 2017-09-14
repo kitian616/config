@@ -79,6 +79,7 @@ ln -s ~/.tq_config/vim/_vimrc ~/.vimrc
 ln -s ~/.tq_config/zsh/_zshrc ~/.zshrc
 ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
 ln -s ~/.tq_config/lint/csscomb/_csscomb.json ~/.csscomb.json
+ln -s ~/.tq_config/lint/textlint/_textlintrc ~/.textlintrc
 ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
 ```
 
