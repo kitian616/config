@@ -55,8 +55,8 @@ set history=500
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = ','
+let g:mapleader = ','
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -68,7 +68,7 @@ set backspace=indent,eol,start
 
 " Multi_language setting
 " default encoding utf-8
-if has("multi_byte")
+if has('multi_byte')
   set encoding=utf-8
   "set fenc=cp936
   " English messages only
@@ -84,10 +84,10 @@ if has("multi_byte")
     set ambiwidth=double
   endif
 else
-  echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
+  echoerr 'Sorry, this version of (g)vim was not compiled with +multi_byte'
 endif
 
-if has("gui_win32")
+if has('gui_win32')
     source $VIMRUNTIME/mswin.vim
     source $ViMRUnTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
@@ -104,7 +104,7 @@ set showcmd
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
+if has('win16') || has('win32')
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
     set wildignore+=.git\*,.hg\*,.svn\*
@@ -249,12 +249,12 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
+if &t_Co > 2 || has('gui_running')
   syntax on         " syntax highlight
   set hlsearch      " search highlightin
 endif
 
-if has("gui_running")
+if has('gui_running')
     " try colorscheme solarized
     try
         let g:solarized_menu=0
@@ -265,16 +265,16 @@ if has("gui_running")
     endtry
 
     " Set font according to syste
-    if has("gui_gtk2")
+    if has('gui_gtk2')
         set guifont=DejaVu\ Sans\ Mono\ 11,Fixed\ 11
         set guifontwide=WenQuanYi\ Zen\ Hei\ 12,PingFang\ SC\ 12
-    elseif has("x11")
+    elseif has('x11')
         " Also for GTK 1
         set guifont=*-lucidatypewriter-medium-r-normal-*-*-180-*-*-m-*-*
-    elseif has("gui_win32")
+    elseif has('gui_win32')
         set guifont=Consolas:h11:cANSI,Source_Code_Pro:h11:cANSI
         set guifontwide=YouYuan:h12:cGB2312,NSimSun:h12:cGB2312
-    elseif has("gui_macvim")
+    elseif has('gui_macvim')
         set guifont=Menlos:h11,Monaco:h11
         set guifontwide=PingFang:h12,STHeiti:h12
     endif
@@ -293,7 +293,7 @@ set cursorline        " highlight current line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("vms")
+if has('vms')
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file
@@ -430,10 +430,13 @@ let g:pymode_trim_whitespaces = 1
 
 " vim-colors-solarized
 "
-call togglebg#map("<F5>")
+call togglebg#map('<F5>')
 
+" json beautify
+"
+map <F4> <Esc>:%!python -m json.tool<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FileTypes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufNewFile,BufRead *.gv set filetype=dot
+autocmd BufNewFile,BufRead *.gv set filetype=dot
