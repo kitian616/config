@@ -10,10 +10,15 @@ node，python 和 ruby 是很多开源工具所依赖的环境，最好一开始
 
 java 也有类似的版本管理工具[jenv](https://github.com/gcuisinier/jenv)，但它并不提供下载的功能。
 
+#### nvm
+
+```
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+```
+
 #### macOS
 
 ```
-brew install nvm
 brew install pyenv
 brew install rbenv
 ```
@@ -21,7 +26,6 @@ brew install rbenv
 #### Ubuntu, Debian
 
 ```
-apt install nvm
 apt install pyenv
 apt install rbenv
 ```
@@ -29,7 +33,6 @@ apt install rbenv
 #### Arch Linux
 
 ```
-pacman -S nvm
 pacman -S pyenv
 pacman -S rbenv
 ```
