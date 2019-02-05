@@ -8,52 +8,20 @@
 
 ### macOS
 
-```
-brew install zsh
+```bash
+$ brew install zsh
 ```
 
 ### Ubuntu, Debian
 
-```
-apt install zsh
+```bash
+$ apt install zsh
 ```
 
 ### Arch Linux
 
-```
-pacman -S zsh
-```
-
-## zgen
-
-### installation
-
 ```bash
-git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
-```
-
-### plugins
-
-```bash
-brew install coreutils jq fzf
-```
-
-### reset
-
-```bash
-zgen reset
-```
-
-### Update all plugins and reset
-
-```
-zgen update
-```
-
-### Update zgen
-
-```
-zgen selfupdate
+$ pacman -S zsh
 ```
 
 ## 安装 Powerline 字体
