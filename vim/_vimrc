@@ -11,8 +11,8 @@
 " To use it, copy it to
 "       for Unix and OS/2:  ~/.vimrc
 "	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
+"       for MS-DOS and Win32:  $VIM\_vimrc
+"	      for OpenVMS:  sys$login:.vimrc
 "
 " Sections:
 "    -> Globle

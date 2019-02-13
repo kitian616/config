@@ -1,0 +1,32 @@
+{
+    "rules": {
+        "ja-space-between-half-and-full-width": {
+            "space": "always",
+            "exceptPunctuation": true
+        },
+        "ja-space-around-code": {
+            "before": true,
+            "after": true
+        },
+        "write-good": {
+            "passive": false,
+            "thereIs": false
+        },
+        "terminology": {
+            "defaultTerms": true,
+            "terms": [
+                "Linux",
+                "Ruby",
+                "Python",
+                "Unix",
+                "Zsh",
+                "Vim",
+                "npm",
+                "Less",
+                "React",
+                "React Native",
+                "Vue"
+            ]
+        }
+    }
+}

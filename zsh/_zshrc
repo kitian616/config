@@ -1,6 +1,5 @@
 # Author    Tian Qi
 # Email     kitian616@outlook.com
-# Github    https://github.com/kitian616/config
 # Version   2.0.4 - 02/04/2019
 
 local _ZPLUG_HOME="$HOME/.zplug"
