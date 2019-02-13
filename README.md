@@ -39,7 +39,7 @@ pacman -S rbenv
 
 #### 终端环境的配置
 
-为了能够使用上述的工具，需要对终端环境(bash/zsh)进行配置。（该配置的`_zshrc`文件已经对它们进行了配置）
+为了能够使用上述的工具，需要对终端环境(bash/zsh)进行配置。（本项目的`_zshrc`文件已经对它们进行了配置）
 
 ##### nvm
 
@@ -83,6 +83,7 @@ ln -s ~/.tq_config/zsh/_zshrc ~/.zshrc
 ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
 ln -s ~/.tq_config/lint/csscomb/_csscomb.json ~/.csscomb.json
 ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
+ln -s ~/.tq_config/lint/textlint/_textlintrc ~/.textlintrc
 ```
 
 带 ES6 规则和 es7 支持的 eslint 文件。
@@ -91,7 +92,7 @@ ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
 ln -s ~/.tq_config/lint/eslint/_eslintrc_es7 ~/.eslintrc_es7
 ```
 
-## hint的配置
+## lint 的配置
 
 见 lint 目录的 READEME。
 

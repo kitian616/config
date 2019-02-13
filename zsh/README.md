@@ -32,7 +32,6 @@ $ pacman -S zsh
 
 终端的配置，以 iTerm 为例，Preferences -> Profiles -> Text标签 -> Change Font 选择方才安装的 `... for Powerline` 系列字体。
 
-
 ## 安装 iTerm2 color theme
 
 截图中使用的是 [Dracula](https://draculatheme.com/) 主题，你可以选择自己喜欢的终端和主题。
