@@ -9,7 +9,7 @@ local _NVM_SH="/usr/local/opt/nvm/nvm.sh"
 local _BASH_COMPLETION="/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 local _PYENV_HOME="$HOME/.pyenv"
 local _RBENV_HOME="$HOME/.rbenv"
-local CUSTOM_PLUGINS_PATH="~/.custom_scripts/plugins"
+local _CUSTOM_PLUGINS_PATH="$HOME/.custom_scripts/plugins/"
 
 # Utils
 # 0 exit
@@ -24,12 +24,6 @@ cmd_exist() {
         fi
     fi
 }
-
-# homebrew
-if [[ $(cmd_exist brew) -eq 0 ]]; then
-    echo "init homebrew."
-    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-fi
 
 # nvm
 if [[ -s $_NVM_SH ]]; then
@@ -64,7 +58,7 @@ if [[ $(cmd_exist yarn) -eq 0 ]]; then
 fi
 
 # Auto install Vundle
-if [[ ! -e "$_VUNDLE_HOME" ]]; then
+if [[ ! -e $_VUNDLE_HOME ]]; then
     echo "install Vundle."
     git clone https://github.com/VundleVim/Vundle.vim.git $_VUNDLE_HOME
 fi
@@ -121,8 +115,8 @@ zplug load --verbose  > /dev/null
 
 # load custom plugins
 echo "load custom plugins."
-if [[ -d ~/.custom_scripts/plugins ]]; then
-    for FILE in ~/.custom_scripts/plugins/*.sh; do
+if [[ -d $_CUSTOM_PLUGINS_PATH ]]; then
+    for FILE in ${_CUSTOM_PLUGINS_PATH}/*.sh; do
         source $FILE;
     done
 fi
