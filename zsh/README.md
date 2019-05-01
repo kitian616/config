@@ -24,6 +24,20 @@ apt install zsh
 pacman -S zsh
 ```
 
+### 修改默认 shell 为 zsh
+
+查看已安装 shell
+
+```bash
+cat /etc/shells
+```
+
+设置默认 shell
+
+```bash
+chsh -s /bin/zsh
+```
+
 ## 安装 Powerline 字体
 
 很多 Zsh 主题都依赖 Powerline 字体，为了方便使用不同的主题，需要安装并配置好 Powerline 字体。

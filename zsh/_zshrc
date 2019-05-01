@@ -5,7 +5,8 @@
 local _ZPLUG_HOME="$HOME/.zplug"
 local _VUNDLE_HOME="$HOME/.vim/bundle/Vundle.vim"
 local _NVM_HOME="$HOME/.nvm"
-local _NVM_SH="$_NVM_HOME/nvm.sh"
+local _NVM_SH="/usr/local/opt/nvm/nvm.sh"
+local _BASH_COMPLETION="/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 local _PYENV_HOME="$HOME/.pyenv"
 local _RBENV_HOME="$HOME/.rbenv"
 local CUSTOM_PLUGINS_PATH="~/.custom_scripts/plugins"
@@ -31,10 +32,14 @@ if [[ $(cmd_exist brew) -eq 0 ]]; then
 fi
 
 # nvm
-if [[ -d $_NVM_HOME ]] && [[ -e $_NVM_SH ]]; then
+if [[ -s $_NVM_SH ]]; then
     echo "init nvm."
     export NVM_DIR=$_NVM_HOME
     . "$_NVM_SH"
+    if [[ -s $_BASH_COMPLETION ]]; then
+        echo "load nvm bash_completion."
+        . "$_BASH_COMPLETION"
+    fi
 fi
 
 # pyenv
@@ -64,20 +69,13 @@ if [[ ! -e "$_VUNDLE_HOME" ]]; then
     git clone https://github.com/VundleVim/Vundle.vim.git $_VUNDLE_HOME
 fi
 
-# Change default shell to ZSH
-if [[ ! $SHELL == *zsh* ]]; then
-    echo "change default shell to ZSH."
-    chsh -s $(which zsh)
-fi
-
-
 ## zplug
 echo "load zplug."
 init_zplug() {
     export ZPLUG_HOME=$_ZPLUG_HOME
     source $_ZPLUG_HOME/init.zsh
 }
-if [[ -e "$_ZPLUG_HOME/init.zsh" ]]; then
+if [[ -s "$_ZPLUG_HOME/init.zsh" ]]; then
     init_zplug
 else
     if [[ $(cmd_exist zplug) -ne 0 ]]; then
