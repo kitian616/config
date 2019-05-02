@@ -1,9 +1,24 @@
-# Author    Tian Qi
-# Email     kitian616@outlook.com
-# Version   2.0.4 - 02/04/2019
+###############################################################
+# Maintainer
+#       Tian Qi
+#       kitian616@outlook.com
+#
+# Version:
+#       2.1.0 - 05/02/2019
+#
+# Sections:
+#   -> Variables
+#   -> Utils
+#   -> Programming Languages Version Managers
+#   -> Plugin Manager & Plugins
+#   -> Custom Plugins
+#
+###############################################################
 
+###############################################################
+# => Variables
+###############################################################
 local _ZPLUG_HOME="$HOME/.zplug"
-local _VUNDLE_HOME="$HOME/.vim/bundle/Vundle.vim"
 local _NVM_HOME="$HOME/.nvm"
 local _NVM_SH="/usr/local/opt/nvm/nvm.sh"
 local _BASH_COMPLETION="/usr/local/opt/nvm/etc/bash_completion.d/nvm"
@@ -11,7 +26,9 @@ local _PYENV_HOME="$HOME/.pyenv"
 local _RBENV_HOME="$HOME/.rbenv"
 local _CUSTOM_PLUGINS_PATH="$HOME/.custom_scripts/plugins/"
 
-# Utils
+###############################################################
+# => Utils
+###############################################################
 # 0 exit
 cmd_exist() {
     if [[ $1 ]]; then
@@ -25,7 +42,10 @@ cmd_exist() {
     fi
 }
 
-# nvm
+###############################################################
+# => Programming Languages Version Managers
+###############################################################
+## nvm
 if [[ -s $_NVM_SH ]]; then
     echo "init nvm."
     export NVM_DIR=$_NVM_HOME
@@ -36,7 +56,7 @@ if [[ -s $_NVM_SH ]]; then
     fi
 fi
 
-# pyenv
+## pyenv
 if [[ -e $_PYENV_HOME ]] && [[ $(cmd_exist pyenv) -eq 0 ]]; then
     echo "init pyenv."
     export PYENV_ROOT=$_PYENV_HOME
@@ -44,26 +64,22 @@ if [[ -e $_PYENV_HOME ]] && [[ $(cmd_exist pyenv) -eq 0 ]]; then
     eval "$(pyenv init -)"
 fi
 
-# rbenv
+## rbenv
 if [[ -e $_RBENV_HOME ]] && [[ $(cmd_exist rbenv) -eq 0 ]]; then
     echo "init rbenv."
     export PATH="$_RBENV_HOME/bin:$PATH"
     eval "$(rbenv init -)"
 fi
 
-# yarn
+## yarn
 if [[ $(cmd_exist yarn) -eq 0 ]]; then
     echo "init yarn."
     export PATH="$PATH:`yarn global bin`"
 fi
 
-# Auto install Vundle
-if [[ ! -e $_VUNDLE_HOME ]]; then
-    echo "install Vundle."
-    git clone https://github.com/VundleVim/Vundle.vim.git $_VUNDLE_HOME
-fi
-
-## zplug
+###############################################################
+# => Plugin Manager & Plugins
+###############################################################
 echo "load zplug."
 init_zplug() {
     export ZPLUG_HOME=$_ZPLUG_HOME
@@ -82,13 +98,14 @@ fi
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins for oh-my-zsh plugins document.
 zplug "lib/theme-and-appearance", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
-
 zplug "plugins/z", from:oh-my-zsh
+
 # clipcopy - Copy data to clipboard
 # Usage:
 #  <command> | clipcopy    - copies stdin to clipboard
 #  clipcopy <file>         - copies a file's contents to clipboard
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+
 zplug "lib/completion", from:oh-my-zsh
 zplug "plugins/extract", from:oh-my-zsh
 
@@ -112,8 +129,9 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose  > /dev/null
 
-
-# load custom plugins
+###############################################################
+# => Custom Plugins
+###############################################################
 echo "load custom plugins."
 if [[ -d $_CUSTOM_PLUGINS_PATH ]]; then
     for FILE in ${_CUSTOM_PLUGINS_PATH}/*.sh; do

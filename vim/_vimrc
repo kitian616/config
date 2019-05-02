@@ -2,10 +2,9 @@
 " Maintainer:
 "       Tian Qi
 "       kitian616@outlook.com
-"       https://github.com/kitian616/config
 "
 " Version:
-"       2.1.1 - 02/21/2016
+"       2.2.0 - 05/02/2019
 "
 " How To Use:
 " To use it, copy it to
@@ -15,24 +14,15 @@
 "	      for OpenVMS:  sys$login:.vimrc
 "
 " Sections:
-"    -> Globle
-"    -> General
-"    -> VIM user interface
-"    -> Plugins :Vundle.vim
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Status line :Plugin airline.vim
-"    -> Plugin settings
-"    -> FileTypes
+"   -> Globle
+"   -> General
+"   -> VIM User Interface
+"   -> Plugins
+"   -> Colors and Fonts
+"   -> Files, Backups and Undo
+"   -> Text, Tab and Indent Related
+"   -> FileTypes
 "
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,11 +48,9 @@ set history=500
 let mapleader = ","
 let g:mapleader = ","
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
+" => VIM User Interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -152,9 +140,8 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins :Vundle.vim
+" => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -171,10 +158,9 @@ endif
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-""""""""""""""""""""""""""""""""""
-" TODO:Plug-ins list
-""""""""""""""""""""""""""""""""""
 
+" Plugins
+"
 " Plugins for UI.
 "
 " precision color scheme for multiple applications (terminal, vim, etc.)
@@ -183,52 +169,6 @@ Plugin 'altercation/vim-colors-solarized'
 " aireline , a powerline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" Plugin for CODE READING.
-"
-"*Extra highlighting of typedefs, enumerations etc (based on ctags)
-"Plugin 'abudden/taghighlight-automirror'
-
-" Display tags of the current file
-"Plugin 'vim-scripts/Tagbar'
-"Vim plugin, insert or delete brackets, parens, quotes in pair
-Plugin 'jiangmiao/auto-pairs'
-
-" Plugin for C/C++
-"
-" Alternate Files quickly (.c --> .h etc)
-"Plugin 'vim-scripts/a.vim'
-" C/C++ IDE -- Write and run programs. Insert statements, idioms, comments etc.
-"Plugin 'vim-scripts/c.vim'
-" Additional Vim syntax highlighting for C++ (including C++11/14)
-"Plugin 'octol/vim-cpp-enhanced-highlight'
-" C/C++ omni-completion with ctags database
-"Plugin 'vim-scripts/OmniCppComplete'
-
-" Plugins fot Python
-"
-" python-mode. PyLint, Rope, Pydoc, breakpoints from box.
-"Plugin 'klen/python-mode'
-
-" Plugins for WEB DEVELOPMENT.
-"
-" HTML5 omnicomplete and syntax
-Plugin 'othree/html5.vim'
-" Vastly improved Javascript indentation and syntax
-Plugin 'pangloss/vim-javascript'
-"  css/less/sass/html color preview for vim
-Plugin 'gorodinskiy/vim-coloresque'
-" Helps editing xml (and [x]html, sgml, xslt) files
-Plugin 'othree/xml.vim'
-" Emmet for vim
-Plugin 'mattn/emmet-vim'
-
-" Plugin for COMMON USE.
-"
-" Intensely orgasmic commenting
-Plugin 'scrooloose/nerdcommenter'
-" Perform all your vim insert mode completions with Tab
-Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -243,6 +183,34 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Status line
+"
+" Plugin 'vim-airline/vim-airline'
+"
+set laststatus=2    " Always show the status line
+
+" set airline theme
+let g:airline_theme='luna'
+
+" enable tabline
+let g:airline#extensions#tabline#enabled = 1
+
+" enable Powerline fonts
+"let g:airline_powerline_fonts = 1
+
+" display numbers in the tabline
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+" \1 tab with number 1, \2 tab with number 2.
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -289,12 +257,11 @@ endif
 set cursorline        " highlight current line
 "highlight CursorLine      guibg=#003853 ctermbg=24  gui=none cterm=none
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
+" => Files, Backups and Undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
+  set nobackup	" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file
 endif
@@ -304,7 +271,7 @@ set directory=.,$TEMP
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
+" => Text, Tab and Indent Related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
@@ -328,105 +295,6 @@ set autoindent "Auto indent
 set smartindent "Smart indent
 
 set wrap "Wrap lines
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Status line :Plugin airline.vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set laststatus=2    " Always show the status line
-
-" set airline theme
-let g:airline_theme='luna'
-"
-" enable tabline
-let g:airline#extensions#tabline#enabled = 1
-
-" enable Powerline fonts
-"let g:airline_powerline_fonts = 1
-
-" display numbers in the tabline
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-
-" \1 tab with number 1, \2 tab with number 2.
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugin settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" a.vim
-"
-" :A 头文件／源文件切换
-" :AS 分割窗后并切换头/源文件(切割为上下两个窗口)
-" :AV 垂直切割窗口后切换头/源文件(切割为左右两个窗口)
-" :AT 新建Vim标签式窗口后切换
-" :AN 在多个匹配文件间循环切换
-" :IH 切换至光标所在文件
-" :IHS 分割窗口后切换至光标所在文件
-" :IHV 垂直分割窗口后切换
-" :IHT 新建标签式窗口后切换
-" :IHN 在多个匹配文件间循环切换
-" 快捷键操作
-" <Leader>ih 切换至光标所在文件
-" <Leader>is 切换至光标所在处(单词所指)文件的配对文件(如光标所在处为foo.h，则切换至foo.c/foo.cpp...)
-" <Leader>ihn 在多个匹配文件间循环切换
-
-
-" tagbar.vim
-"
-" set keymap
-nnoremap <silent> <F12> :TagbarToggle<CR>
-" Width of the Tagbar window
-let g:tagbar_width = 35
-" Vim window will be expanded by the width of the Tagbar window
-"let g:tagbar_expand = 2
-
-
-" csupport
-"
-let g:C_LoadMenus = 'yes'
-let g:C_Root = '&Plugin.&C\/C\+\+.'
-let g:C_MenuHeader = 'no'
-
-" /OmniCppComplete
-"
-" Insert mode completion
-set completeopt=longest,menu
-
-" vim.cpp
-"
-let g:cpp_class_scope_highlight = 1
-let g:cpp_experimental_template_highlight = 1
-
-" python-mode
-" thogen load
-"
-let g:pymode = 1
-let g:pymode_options = 1
-let g:pymode_trim_whitespaces = 1
-
-" NERD_commenter.vim
-"
-" n\cc | 为光标以下 n 行添加注释
-" n\cu | 为光标以下 n 行取消注释
-" n\cm | 为光标以下 n 行添加块注释
-
-
-" tablify.vim
-"
-" \tl or \tt | turns selected lines into table (left-aligned text)
-" \tc        | turns selected lines into table (centered text)
-" \tr        | turns selected lines into table (right-aligned text)
-" \tu        | convert selected table back into text
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FileTypes
