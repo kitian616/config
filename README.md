@@ -13,9 +13,14 @@ java 也有类似的版本管理工具[jenv](https://github.com/gcuisinier/jenv)
 #### macOS
 
 ```bash
-brew install nvm
+# Don't use Homebrew to install nvm!
 brew install pyenv
 brew install rbenv
+```
+
+```bash
+cd ~
+git clone https://github.com/creationix/nvm.git .nvm
 ```
 
 #### Ubuntu, Debian
@@ -37,31 +42,6 @@ pacman -S rbenv
 #### 终端环境的配置
 
 为了能够使用上述的工具，需要对终端环境(bash/zsh)进行配置。（本项目的 `_zshrc` 文件已经对它们进行了配置）
-
-##### nvm
-
-```bash
-export NVM_DIR="$HOME/.nvm" && (
-  git clone https://github.com/creationix/nvm.git "$NVM_DIR"
-  cd "$NVM_DIR"
-  git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
-) && . "$NVM_DIR/nvm.sh"
-```
-
-##### pyenv
-
-```bash
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-```
-
-##### rbenv
-
-```bash
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-```
 
 ## Vim，Zsh 的配置
 

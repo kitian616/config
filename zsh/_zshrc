@@ -20,8 +20,8 @@
 ###############################################################
 local _ZPLUG_HOME="$HOME/.zplug"
 local _NVM_HOME="$HOME/.nvm"
-local _NVM_SH="/usr/local/opt/nvm/nvm.sh"
-local _BASH_COMPLETION="/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+local _NVM_SH="$_NVM_HOME/nvm.sh"
+local _BASH_COMPLETION="$_NVM_HOME/bash_completion"
 local _PYENV_HOME="$HOME/.pyenv"
 local _RBENV_HOME="$HOME/.rbenv"
 local _CUSTOM_PLUGINS_PATH="$HOME/.custom_scripts/plugins/"
