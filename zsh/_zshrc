@@ -71,12 +71,6 @@ if [[ -e $_RBENV_HOME ]] && [[ $(cmd_exist rbenv) -eq 0 ]]; then
     eval "$(rbenv init -)"
 fi
 
-## yarn
-if [[ $(cmd_exist yarn) -eq 0 ]]; then
-    echo "init yarn."
-    export PATH="$PATH:`yarn global bin`"
-fi
-
 ###############################################################
 # => Plugin Manager & Plugins
 ###############################################################
