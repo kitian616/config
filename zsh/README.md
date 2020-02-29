@@ -9,6 +9,7 @@
 ### macOS
 
 ```bash
+xcode-select –install
 brew install zsh
 ```
 
