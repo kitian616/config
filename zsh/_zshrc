@@ -107,6 +107,8 @@ zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
 zplug "plugins/git", from:oh-my-zsh
 
