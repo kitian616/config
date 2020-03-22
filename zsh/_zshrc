@@ -72,7 +72,7 @@ if [[ -e $_RBENV_HOME ]] && [[ $(cmd_exist rbenv) -eq 0 ]]; then
 fi
 
 ###############################################################
-# => Plugin Manager & Plugins
+# => Plugins
 ###############################################################
 echo "load zplug."
 init_zplug() {
@@ -89,30 +89,25 @@ else
     fi
 fi
 
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins for oh-my-zsh plugins document.
-zplug "lib/theme-and-appearance", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
-zplug "plugins/z", from:oh-my-zsh
+# Directories
+zplug "lib/directories",           from:oh-my-zsh, depth:1
+zplug "plugins/z",                 from:oh-my-zsh, depth:1
 
-# clipcopy - Copy data to clipboard
-# Usage:
-#  <command> | clipcopy    - copies stdin to clipboard
-#  clipcopy <file>         - copies a file's contents to clipboard
-zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+# Completions
+zplug "plugins/sudo",              from:oh-my-zsh, defer:2, depth:1
+zplug "lib/completion",            from:oh-my-zsh, defer:2, depth:1
+zplug "lukechilds/zsh-better-npm-completion", defer:2, depth:1
+zplug "g-plane/zsh-yarn-autocompletions",     hook-build:"./zplug.zsh", defer:2, depth:1
 
-zplug "lib/completion", from:oh-my-zsh
-zplug "plugins/extract", from:oh-my-zsh
+# Suggestions
+zplug "zsh-users/zsh-autosuggestions",          defer:2, depth:1
+zplug "zsh-users/zsh-history-substring-search", defer:2, depth:1
 
-zplug "plugins/sudo", from:oh-my-zsh
-zplug "plugins/command-not-found", from:oh-my-zsh
-zplug "plugins/colored-man-pages", from:oh-my-zsh
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "lukechilds/zsh-better-npm-completion", defer:2
-zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
+# Highlightings
+zplug "zsh-users/zsh-syntax-highlighting", defer:2, depth:1
 
-zplug "plugins/git", from:oh-my-zsh
-
-zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+# Theme
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, as:theme, depth:1
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -124,6 +119,12 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load --verbose  > /dev/null
+
+# Bindkey
+if zplug check zsh-users/zsh-history-substring-search; then
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
+fi
 
 ###############################################################
 # => Custom Plugins
