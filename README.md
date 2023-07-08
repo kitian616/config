@@ -57,21 +57,11 @@ pacman -S rbenv
 git clone https://github.com/kitian616/config.git ~/.tq_config
 ln -s ~/.tq_config/vim/_vimrc ~/.vimrc
 ln -s ~/.tq_config/zsh/_zshrc ~/.zshrc
-ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
-ln -s ~/.tq_config/lint/stylelint/_stylelintrc ~/.stylelintrc
-ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
-ln -s ~/.tq_config/lint/textlint/_textlintrc ~/.textlintrc
+# ln -s ~/.tq_config/lint/htmlhint/_htmlhintrc ~/.htmlhintrc
+# ln -s ~/.tq_config/lint/stylelint/_stylelintrc ~/.stylelintrc
+# ln -s ~/.tq_config/lint/eslint/_eslintrc ~/.eslintrc
+# ln -s ~/.tq_config/lint/textlint/_textlintrc ~/.textlintrc
 ```
-
-带 ES6 规则和 ES2016 支持的 ESLint 配置。
-
-```bash
-ln -s ~/.tq_config/lint/eslint/_eslintrc_es2016 ~/.eslintrc_es2016
-```
-
-## Lint 的配置
-
-见 *lint* 目录的 *README.md*。
 
 ## 更新
 
