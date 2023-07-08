@@ -71,6 +71,11 @@ if [[ -e $_RBENV_HOME ]] && [[ $(cmd_exist rbenv) -eq 0 ]]; then
     eval "$(rbenv init -)"
 fi
 
+## starship
+# https://github.com/starship/starship
+echo "init starship."
+eval "$(starship init zsh)"
+
 ###############################################################
 # => Plugins
 ###############################################################
@@ -107,15 +112,15 @@ zplug "zsh-users/zsh-history-substring-search", defer:2, depth:1
 zplug "zsh-users/zsh-syntax-highlighting", defer:2, depth:1
 
 # Theme
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, as:theme, depth:1
+# zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 # Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+# if ! zplug check --verbose; then
+#     printf "Install? [y/N]: "
+#     if read -q; then
+#         echo; zplug install
+#     fi
+# fi
 
 # Then, source plugins and add commands to $PATH
 zplug load --verbose  > /dev/null
@@ -136,4 +141,4 @@ if [[ -d $_CUSTOM_PLUGINS_PATH ]]; then
     done
 fi
 
-echo "have fun :)"
+echo "happy coding :)"
