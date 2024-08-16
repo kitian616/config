@@ -1,7 +1,5 @@
 # Zsh Config
 
-![screenshot](https://github.com/kitian616/config/blob/master/zsh/screenshot.jpg?raw=true)
-
 ## Install Zsh
 
 ### macOS
@@ -50,13 +48,3 @@ chsh -s /bin/zsh
 ## 安装 iTerm2 color theme
 
 截图中使用的是 [Dracula](https://draculatheme.com/) 主题，你可以选择自己喜欢的终端和主题。
-
-## 插件管理
-
-使用 [zplug](https://github.com/zplug/zplug) 来管理 Zsh 插件。
-
-更新所有插件：
-
-```bash
-zplug update
-```
