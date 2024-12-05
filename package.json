@@ -24,7 +24,7 @@
   "homepage": "https://github.com/kitian616/config#readme",
   "devDependencies": {
     "csscomb": "^4.0.1",
-    "eslint": "^3.16.1",
+    "eslint": "^4.18.2",
     "eslint-plugin-react": "^6.10.0",
     "htmlhint": "^0.9.13"
   }
