@@ -26,6 +26,6 @@
     "csscomb": "^4.0.1",
     "eslint": "^3.16.1",
     "eslint-plugin-react": "^6.10.0",
-    "htmlhint": "^0.9.13"
+    "htmlhint": "^1.1.4"
   }
 }
